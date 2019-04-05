@@ -7,7 +7,7 @@ pipeline {
             JOB_DIR=\$(pwd)
             rm -rf backup
             mkdir backup
-            cd /var/jenkins_home/jobs
+            cd /var/lib/jenkins_home/jobs
             find . -type f -name config.xml -exec cp --parent {} \$JOB_DIR/backup \\;
             cd \$JOB_DIR
             git add .
